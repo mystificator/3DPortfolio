@@ -24,10 +24,10 @@ const About = () => {
                         <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
 
                         <div>
-                            <p className="grid-headtext">About me</p>
+                            <p className="grid-headtext">Who I am?</p>
                             <p className="grid-subtext">
-                                With nearly a year of hands-on experience in full-stack web development, I have cultivated strong expertise in both frontend and backend technologies.
-                                My journey began with building responsive and interactive websites, blending creativity with robust backend logic.
+                                My name is Vipul Tandon. With nearly a year of hands-on experience in full-stack web development, I have honed my skills in both frontend and backend technologies.
+                                I'm a self-motivated and hardworking individual who is always ready to learn new things and work in a team.
                             </p>
                         </div>
                     </div>
@@ -65,7 +65,9 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
                             <p className="grid-subtext">I&apos;m based in Indore, India and open to remote work worldwide.</p>
-                            <Button name="Let's work together" isBeam containerClass="w-full mt-10" />
+                            <a href="#contact">
+                                <Button name="Let's work together" isBeam containerClass="w-full mt-10" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -80,6 +82,9 @@ const About = () => {
                                 I love solving problems and building things through code. Programming isn&apos;t just my
                                 profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
                             </p>
+                            <a href="https://drive.google.com/file/d/1x1ABZKuN7_UnZADeFYtdOlsvPdLoEjy2/view?usp=sharing" target='_blank'>
+                                <Button name="See my Resume" isBeam containerClass="w-full mt-10" />
+                            </a>
                         </div>
                     </div>
                 </div>
