@@ -58,10 +58,10 @@ const Contact = () => {
                 <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
 
                 <div className="contact-container">
-                    <h3 className="head-text">Let's talk</h3>
+                    <h3 className="head-text">Let's Collaborate!</h3>
                     <p className="text-lg text-white-600 mt-3">
-                        Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
-                        life, I’m here to help.
+                        Whether you need a powerful web platform, custom software solutions, or a visionary project brought to life,
+                        I’m here to make it happen..
                     </p>
 
 
@@ -101,7 +101,7 @@ const Contact = () => {
                                 value={form.message}
                                 onChange={handleChange}
                                 required
-                                rows={5}
+                                rows={3}
                                 className="field-input"
                                 placeholder="Share your thoughts or inquiries..."
                             />
