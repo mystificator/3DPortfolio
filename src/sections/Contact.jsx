@@ -1,6 +1,9 @@
 import emailjs from '@emailjs/browser';
 import React, { useRef, useState } from 'react'
 
+import useAlert from '../hooks/useAlert.js';
+import Alert from '../components/Alert.jsx';
+
 const Contact = () => {
     const formRef = useRef();
 
@@ -11,48 +14,62 @@ const Contact = () => {
         message: ""
     });
 
+    const { alert, showAlert, hideAlert } = useAlert();
+
     const handleChange = ({ target: { name, value } }) => {
         setForm({ ...form, [name]: value })
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         setLoading(true);
 
-        try {
-            await emailjs.send(
-                "service_dxc8qph",
-                "template_9wmz7x4",
-                {
-                    from_name: form.name,
-                    to_name: 'Vipul Tandon',
-                    from_email: form.email,
-                    to_email: 'vipultandon.business@gmail.com',
-                    message: form.message,
-                },
-                '2BEomBzJal0ganX_M'
-            )
-            setLoading(false);
+        emailjs.send(
+            "service_dxc8qph",
+            "template_9wmz7x4",
+            {
+                from_name: form.name,
+                to_name: 'Vipul Tandon',
+                from_email: form.email,
+                to_email: 'vipultandon.business@gmail.com',
+                message: form.message,
+            },
+            '2BEomBzJal0ganX_M'
+        ).then(
+            () => {
+                setLoading(false);
+                showAlert({
+                    show: true,
+                    text: 'Your message has been sent!',
+                    type: 'success',
+                });
 
-            alert('Your message has been sent!')
+                setTimeout(() => {
+                    hideAlert(false);
+                    setForm({
+                        name: '',
+                        email: '',
+                        message: '',
+                    });
+                }, [3000]);
+            },
+            (error) => {
+                setLoading(false);
+                console.error(error);
 
-            setForm({
-                name: '',
-                email: '',
-                message: ''
-            });
-        } catch (error) {
-            setLoading(false);
-
-            console.log(error);
-
-            alert('Something went wrong!')
-        }
-    }
+                showAlert({
+                    show: true,
+                    text: "Something went wrong!",
+                    type: 'danger',
+                });
+            },
+        );
+    };
 
     return (
         <section className="c-space my-20" id="contact">
+            {alert.show && <Alert {...alert} />}
 
             <div className="relative min-h-screen flex items-center justify-center flex-col">
                 <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
