@@ -26,8 +26,8 @@ const Contact = () => {
         setLoading(true);
 
         emailjs.send(
-            "service_dxc8qph",
-            "template_9wmz7x4",
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             {
                 from_name: form.name,
                 to_name: 'Vipul Tandon',
@@ -35,7 +35,8 @@ const Contact = () => {
                 to_email: 'vipultandon.business@gmail.com',
                 message: form.message,
             },
-            '2BEomBzJal0ganX_M'
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+
         ).then(
             () => {
                 setLoading(false);
