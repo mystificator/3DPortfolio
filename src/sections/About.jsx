@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Globe from 'react-globe.gl';
 import Button from '../components/Button';
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
+
+    const globeEl = useRef();
+    useEffect(() => {
+        // Once the globe is loaded, set the initial view
+        globeEl.current.pointOfView({ lat: 22.719568, lng: 75.857727, altitude: 1.5 }, 1000);
+    }, []);
 
     const handleCopy = () => {
         navigator.clipboard.writeText(
@@ -51,6 +57,7 @@ const About = () => {
                     <div className="grid-container">
                         <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
                             <Globe
+                                ref={globeEl}
                                 height={326}
                                 width={326}
                                 backgroundColor="rgba(0, 0, 0, 0)"
@@ -59,7 +66,18 @@ const About = () => {
                                 showGraticules
                                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                                labelsData={[{ lat: 22.719568, lng: 75.857727, text: "I'm, here", color: 'white', size: 20 }]}
+                                labelsData={[
+                                    {
+                                        lat: 22.719568,
+                                        lng: 75.857727,
+                                        text: "I'm here", // Add a pin icon or emoji
+                                        size: 0.5, // Adjust size
+                                        color: "white", // Pin color
+                                    }
+                                ]}
+                                labelAltitude={0.05} // Keeps label closer to the globe
+                                labelSize={2.5} // Increase label size to make it visible from a higher altitude
+                                labelDotRadius={0.4}
                             />
                         </div>
                         <div>
