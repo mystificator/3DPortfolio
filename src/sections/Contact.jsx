@@ -57,7 +57,7 @@ const Contact = () => {
             <div className="relative min-h-screen flex items-center justify-center flex-col">
                 <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
 
-                <div className="contact-container">
+                <div className="contact-container pt-7">
                     <h3 className="head-text">Let's Collaborate!</h3>
                     <p className="text-lg text-white-600 mt-3">
                         Whether you need a powerful web platform, custom software solutions, or a visionary project brought to life,
