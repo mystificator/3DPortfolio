@@ -75,7 +75,7 @@ export const myProjects = [
     desc: "A full stack app using OpenAI's DALL·E API to generate images from text, allowing users to share, view, and download creations in a community.",
     subdesc:
       "The app is a MERN stack project that integrates OpenAI's DALL·E API to generate images from user-provided text descriptions. Users can share their generated images with a community, where others can browse, view, and download the shared creations. It combines creative AI capabilities with social sharing features for an engaging user experience.",
-    href: 'https://dream-ai-nine.vercel.app/',
+    href: 'https://dream-ai-umber.vercel.app/',
     texture: '/textures/project/project3.mp4',
     logo: '/assets/project-logo3.png',
     alt: "a dreamy moon and a star",
