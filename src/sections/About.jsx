@@ -32,8 +32,7 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">Who I am?</p>
                             <p className="grid-subtext">
-                                My name is Vipul Tandon. With nearly a year of hands-on experience in full-stack web development, I have honed my skills in both frontend and backend technologies.
-                                I'm a self-motivated and hardworking individual who is always ready to learn new things and work in a team.
+                            I am Vipul Tandon, a Fullstack Web Developer with over a year and a half of experience in building scalable applications across frontend and backend technologies. I am a self-motivated and detail-oriented professional, eager to learn, adapt, and contribute effectively in collaborative team environments
                             </p>
                         </div>
                     </div>
@@ -68,8 +67,8 @@ const About = () => {
                                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                                 labelsData={[
                                     {
-                                        lat: 22.719568,
-                                        lng: 75.857727,
+                                        lat: 28.4595,
+                                        lng: 77.0266,
                                         text: "I'm here", // Add a pin icon or emoji
                                         size: 0.5, // Adjust size
                                         color: "white", // Pin color
@@ -82,7 +81,7 @@ const About = () => {
                         </div>
                         <div>
                             <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-                            <p className="grid-subtext">I&apos;m based in Indore, India and open to remote work worldwide.</p>
+                            <p className="grid-subtext">I&apos;m based in Gurgaon, India and open to remote work worldwide</p>
                             <a href="#contact">
                                 <Button name="Let's work together" isBeam containerClass="w-full mt-10" />
                             </a>
@@ -98,9 +97,9 @@ const About = () => {
                             <p className="grid-headtext">My Passion for Coding</p>
                             <p className="grid-subtext">
                                 I love solving problems and building things through code. Programming isn&apos;t just my
-                                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
+                                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills
                             </p>
-                            <a href="https://drive.google.com/file/d/1x1ABZKuN7_UnZADeFYtdOlsvPdLoEjy2/view?usp=sharing" target='_blank'>
+                            <a href="https://drive.google.com/file/d/1hfDSUeMlkfj8sIPEOe35mv2m3CMpheIa/view?usp=drivesdk" target='_blank'>
                                 <Button name="See my Resume" isBeam containerClass="w-full mt-10" />
                             </a>
                         </div>

@@ -8,7 +8,7 @@ export const navLinks = [
   {
     id: 2,
     name: 'Resume',
-    href: 'https://drive.google.com/file/d/1x1ABZKuN7_UnZADeFYtdOlsvPdLoEjy2/view?usp=sharing',
+    href: 'https://drive.google.com/file/d/1hfDSUeMlkfj8sIPEOe35mv2m3CMpheIa/view?usp=drivesdk',
     target: "_blank"
   },
   {
@@ -148,20 +148,20 @@ export const myProjects = [
 export const workExperiences = [
   {
     id: 1,
-    name: 'Metafic',
+    name: 'Dresma',
     pos: 'Software Engineer',
-    duration: 'Jan 2024 - Present',
-    title: "I worked extensively with the backend team, focusing on Ruby on Rails development. My responsibilities included building and optimizing server-side logic, integrating third-party APIs, and ensuring code quality by following clean code principles.",
-    icon: '/assets/metafic.png',
-    animation: 'salute',
+    duration: 'Mar 2025 - Present',
+    title: "Working as a Fullstack Developer at Dresma, leveraging the MERN stack to build scalable features, redesign system architectures, resolve performance issues, and integrate AI-driven solutions",
+    icon: '/assets/dresma.jpg',
+    animation: 'clapping',
   },
   {
     id: 2,
-    name: 'HaTa Bevtech',
-    pos: 'Web Development Intern',
-    duration: 'April 2023 - June 2023',
-    title: "I focused on optimizing website responsiveness using CSS, and I used Google Apps Script to develop an automation solution for pdf generation. I helped in enhancing user experience through data-driven improvements using Google Analytics, resulting in increased user engagement and conversion rates.",
-    icon: '/assets/hatabevtech.png',
-    animation: 'clapping',
+    name: 'Metafic',
+    pos: 'Software Engineer',
+    duration: 'Jan 2024 - Jan 2025',
+    title: "Worked extensively on backend and frontend development using Ruby on Rails and React.js, building scalable APIs, integrating third-party services, and delivering clean, maintainable code",
+    icon: '/assets/metafic.png',
+    animation: 'salute',
   }
 ];
